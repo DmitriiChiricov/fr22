@@ -1,11 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
 body{
     /*cursor: none;*/
     background: #010001;
+    font-family: 'Dongle', sans-serif;
     align-items: center;
     height: 100vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    font-weight: 500;
 }
 .claviatura{
     display: flex;
@@ -27,6 +30,7 @@ li{
 .rand{
     display: flex;
     font-size: 20px;
+    margin: 0;
 }
 /*Culori la butoane*/
 .rosu{
@@ -54,20 +58,20 @@ li{
     width: 80px;
 }
 #caps{
-    width: 100px
+    width: 96px;
 }
 
 #lshift{
-    width: 150px;
+    width: 128px;
 }
 #rshift{
-    width: 150px;
+    width: 135px;
 }
 #caps{
     width: 100px;
 }
 #enter{
-    width: 135px;
+    width: 96px;
 }
 #back{
     width: 80px;
