@@ -1,0 +1,74 @@
+body{
+    /*cursor: none;*/
+    background: #010001;
+    align-items: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.claviatura{
+    display: flex;
+    flex-direction: column;
+}
+h1,h2{
+    color: white;
+}
+li{
+    height: 50px;
+    width: 50px;
+    text-decoration: none;
+    text-align: center;
+    list-style-type: none;
+    border-radius: 0.5em;
+    margin: 6px;
+    line-height: 56px;
+}
+.rand{
+    display: flex;
+    font-size: 20px;
+}
+/*Culori la butoane*/
+.rosu{
+    background-color: #D51335;
+    border: 2px solid #D51335;
+}
+.roz{
+    background-color: #FF7F50;
+    border: 2px solid #FF7F50;
+}
+.portocaliu{
+    background-color: #FF8C00;
+    border: 2px solid #FF8C00;
+}
+.galben{
+    background-color: #FFD700;
+    border: 2px solid #FFD700;
+}
+.palid{
+    background-color: #F0E68C;
+    border: 2px solid #F0E68C;
+}
+/*Butoane speciale*/
+#tab{
+    width: 80px;
+}
+#caps{
+    width: 100px
+}
+
+#lshift{
+    width: 150px;
+}
+#rshift{
+    width: 150px;
+}
+#caps{
+    width: 100px;
+}
+#enter{
+    width: 135px;
+}
+#back{
+    width: 80px;
+}
