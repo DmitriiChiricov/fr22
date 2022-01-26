@@ -26,6 +26,7 @@ li{
     border-radius: 0.5em;
     margin: 6px;
     line-height: 56px;
+    transition: 2s ease-in-out;
 }
 .rand{
     display: flex;
@@ -37,21 +38,46 @@ li{
     background-color: #D51335;
     border: 2px solid #D51335;
 }
+.rosu.pressed{
+    color: #D51335 ;
+    background-color: black;
+    border: 2px solid #D51335;
+}
 .roz{
     background-color: #FF7F50;
     border: 2px solid #FF7F50;
+}
+.roz.pressed{
+    border: 2px solid #FF7F50;
+    background-color: black;
+    color: #FF7F50;
 }
 .portocaliu{
     background-color: #FF8C00;
     border: 2px solid #FF8C00;
 }
+.portocaliu.pressed{
+    background-color: black;
+    border: 2px solid #FF8C00;
+    color:  #FF8C00;
+}
 .galben{
     background-color: #FFD700;
     border: 2px solid #FFD700;
 }
+.galben.pressed{
+    background-color: black;
+    border: 2px solid #FFD700;
+    color: #FFD700;
+}
 .palid{
     background-color: #F0E68C;
     border: 2px solid #F0E68C;
+}
+.palid.pressed{
+    background-color: black;
+    border: 2px solid #F0E68C;
+    color: #F0E68C;
 }
 /*Butoane speciale*/
 #tab{
@@ -73,6 +99,6 @@ li{
 #enter{
     width: 96px;
 }
-#back{
+#Backspace{
     width: 80px;
 }
