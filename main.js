@@ -1,6 +1,6 @@
 //Random key generator
 
-const keys = [..."ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890-="];
+const keys = [..."ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"];
 
 
 function GiveMeRandomNumber(min, max) {
@@ -21,17 +21,20 @@ function ActivateRandomKey() {
 }
 
 //-----------
-const li = document.querySelector('li')
+// const li = document.querySelector('li')
 window.addEventListener('keyup', (ev) => {
     const Cpress = String.fromCharCode(ev.keyCode)
     console.log(Cpress);
     const element = document.getElementById(Cpress)
    const selectedelement =document.querySelector('.pressed')
-    element.classList.add('pressed')
 if(Cpress === selectedelement.innerHTML){
 selectedelement.classList.remove('pressed');
 ActivateRandomKey();
+} else {
+    element.classList.add('hit')
+    element.addEventListener('animationend', () =>{
+        element.classList.remove('hit')
+    })
 }
-
 });
 ActivateRandomKey();
