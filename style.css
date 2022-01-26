@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
-body{
+
+body {
     /*cursor: none;*/
     background: #010001;
     font-family: 'Dongle', sans-serif;
@@ -10,14 +11,17 @@ body{
     flex-direction: column;
     font-weight: 500;
 }
-.claviatura{
+
+.claviatura {
     display: flex;
     flex-direction: column;
 }
-h1,h2{
+
+h1, h2 {
     color: white;
 }
-li{
+
+li {
     height: 50px;
     width: 50px;
     text-decoration: none;
@@ -26,53 +30,162 @@ li{
     border-radius: 0.5em;
     margin: 6px;
     line-height: 56px;
+    transition: 0.3s ease-in-out;
 }
-.rand{
+
+.rand {
     display: flex;
     font-size: 20px;
     margin: 0;
 }
+
 /*Culori la butoane*/
-.rosu{
+.rosu {
     background-color: #D51335;
     border: 2px solid #D51335;
 }
-.roz{
+
+.rosu.pressed {
+    color: #D51335;
+    background-color: black;
+    border: 2px solid #D51335;
+}
+
+.roz {
     background-color: #FF7F50;
     border: 2px solid #FF7F50;
 }
-.portocaliu{
+
+.roz.pressed {
+    border: 2px solid #FF7F50;
+    background-color: black;
+    color: #FF7F50;
+}
+
+.portocaliu {
     background-color: #FF8C00;
     border: 2px solid #FF8C00;
 }
-.galben{
+
+.portocaliu.pressed {
+    background-color: black;
+    border: 2px solid #FF8C00;
+    color: #FF8C00;
+}
+
+.galben {
     background-color: #FFD700;
     border: 2px solid #FFD700;
 }
-.palid{
+
+.galben.pressed {
+    background-color: black;
+    border: 2px solid #FFD700;
+    color: #FFD700;
+}
+
+.palid {
     background-color: #F0E68C;
     border: 2px solid #F0E68C;
 }
+
+.palid.pressed {
+    background-color: black;
+    border: 2px solid #F0E68C;
+    color: #F0E68C;
+}
+
 /*Butoane speciale*/
-#tab{
+#Tab {
     width: 80px;
 }
-#caps{
+
+#caps {
     width: 96px;
 }
 
-#lshift{
+#lshift {
     width: 128px;
 }
-#rshift{
+
+#rshift {
     width: 135px;
 }
-#caps{
+
+#caps {
     width: 100px;
 }
-#enter{
+
+#enter {
     width: 96px;
 }
-#back{
+
+#Backspace {
     width: 80px;
+}
+
+/*hit-anim*/
+.hit {
+    animation: hit 0.3s ease-in-out both;
+}
+
+@keyframes hit {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/*Shake anim*/
+
+.pressed {
+    animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
+    animation-duration: 0.8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transform-origin: 50% 100%;
+}
+
+@keyframes shake {
+    0% {
+        -webkit-transform: translate(2px, 1px) rotate(0deg);
+    }
+    10% {
+        -webkit-transform: translate(-1px, -2px) rotate(-2deg);
+    }
+    20% {
+        -webkit-transform: translate(-3px, 0px) rotate(3deg);
+    }
+    30% {
+        -webkit-transform: translate(0px, 2px) rotate(0deg);
+    }
+    40% {
+        -webkit-transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+        -webkit-transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+        -webkit-transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+        -webkit-transform: translate(2px, 1px) rotate(-2deg);
+    }
+    80% {
+        -webkit-transform: translate(-1px, -1px) rotate(4deg);
+    }
+    90% {
+        -webkit-transform: translate(2px, 2px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translate(1px, -2px) rotate(-1deg);
+    }
 }
